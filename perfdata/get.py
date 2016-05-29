@@ -10,6 +10,8 @@ def handle_request(rollno, response):
   i -= 1
   if i == 0:
     ioloop.IOLoop.instance().stop()
+  if response.code != 200
+    return
   dep = rollno[2:4]
   with open(dep+'/'+rollno+'.html', 'w') as f:
     f.write(str(response.body))
